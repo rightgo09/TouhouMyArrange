@@ -18,4 +18,10 @@ any '/' => sub {
 	$c->render('index.tt' => { video_list => \@video_list });
 };
 
+any '/watch/:video_id' => sub {
+	my ($c, $args) = @_;
+
+	$c->render('watch.tt' => { video_id => $args->{video_id} });
+};
+
 1;
