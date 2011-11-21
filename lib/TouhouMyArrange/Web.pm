@@ -5,11 +5,10 @@ use utf8;
 use parent qw/TouhouMyArrange Amon2::Web/;
 use File::Spec;
 
-# write your code here.
+# dispatcher
+use TouhouMyArrange::Web::Dispatcher;
 sub dispatch {
-    my ($c) = @_;
-
-    $c->render('index.tt');
+    return TouhouMyArrange::Web::Dispatcher->dispatch($_[0]) or die "response is not generated";
 }
 
 # setup view class
