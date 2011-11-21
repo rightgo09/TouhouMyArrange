@@ -6,7 +6,16 @@ use Amon2::Web::Dispatcher::Lite;
 
 any '/' => sub {
 	my ($c) = @_;
-	$c->render('index.tt');
+
+	my @list = $c->db->search('list'=>{},{limit=>20,offset=>0,order_by=>{pubdate=>'DESC'}});
+
+	my @video_list;
+	for my $video (@list) {
+		my @tag = $c->db->search('tag'=>{video_id=>$video->video_id},{order_by=>'id'});
+		push @video_list, { video => $video, tag => \@tag };
+	}
+
+	$c->render('index.tt' => { video_list => \@video_list });
 };
 
 1;
