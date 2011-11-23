@@ -1,5 +1,16 @@
 [% WRAPPER 'include/layout.tt' %]
+<div id="main">
 <div id="ext_nicovideo">
-	<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/[% video_id %]"></script>
+	<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/[% video.video_id %]"></script>
 </div>
+</div>
+
+<!-- 横サイドバー -->
+<aside id="sidebar">
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({ version: 2, type: 'search', search: '[% video.video_id %]', interval: 30000, title: '', subject: '[% video.title %]', width: 250, height: 400, theme: { shell: { background: '#f99', color: '#ffffff' }, tweets: { background: '#f9f9f9', color: '#444444', links: '#1985b5' } }, features: { scrollbar: true, loop: false, live: true, hashtags: true, timestamp: true, avatars: true, toptweets: true, behavior: 'all' } }).render().start();
+</script>
+</aside>
+
 [% END %]

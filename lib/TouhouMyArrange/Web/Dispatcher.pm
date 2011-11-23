@@ -7,7 +7,7 @@ use Amon2::Web::Dispatcher::Lite;
 any '/' => sub {
 	my ($c) = @_;
 
-	my @list = $c->db->search('list'=>{},{limit=>20,offset=>0,order_by=>{pubdate=>'DESC'}});
+	my @list = $c->db->search('list'=>{},{limit=>8,offset=>0,order_by=>{pubdate=>'DESC'}});
 
 	my @video_list;
 	for my $video (@list) {
@@ -21,7 +21,9 @@ any '/' => sub {
 any '/watch/:video_id' => sub {
 	my ($c, $args) = @_;
 
-	$c->render('watch.tt' => { video_id => $args->{video_id} });
+	my $video = $c->db->single('list' => { video_id => $args->{video_id} });
+
+	$c->render('watch.tt' => { video => $video });
 };
 
 1;
