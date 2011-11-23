@@ -104,3 +104,17 @@ aside#sidebar {
 	margin-bottom: 30px;
 }
 */
+
+table#video_info {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+table#video_info th, table#video_info td {
+	border :1px solid #ccc;
+	padding: 8px;
+}
+table#video_info th {
+	text-align: right;
+	font-weight: normal;
+}
+

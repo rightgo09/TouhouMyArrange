@@ -3,6 +3,36 @@
 <div id="ext_nicovideo">
 	<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/[% video.video_id %]"></script>
 </div>
+<table id="video_info">
+	<tr>
+		<th>動画タイトル</th>
+		<td>[% video.title %]</td>
+	</tr>
+	<tr>
+		<th>投稿日時</th>
+		<td>[% video.pubdate %]</td>
+	</tr>
+	<tr>
+		<th>再生時間</th>
+		<td>[% video.length() %]</td>
+	</tr>
+	<tr>
+		<th>再生回数</th>
+		<td>[% video.view_counter %]</td>
+	</tr>
+	<tr>
+		<th>コメント数</th>
+		<td>[% video.comment_num %]</td>
+	</tr>
+	<tr>
+		<th>マイリスト数</th>
+		<td>[% video.mylist_counter %]</td>
+	</tr>
+	<tr>
+		<th>実際のページ</th>
+		<td><a href="[% video.watch_url %]">[% video.watch_url %]</a></td>
+	</tr>
+</table>
 </div>
 
 <!-- 横サイドバー -->
