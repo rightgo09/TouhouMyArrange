@@ -31,7 +31,7 @@
 <aside id="sidebar">
 <script src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
-new TWTR.Widget({ version: 2, type: 'search', search: '東方自作アレンジ', interval: 30000, title: '', subject: '東方自作アレンジ', width: 250, height: 800, theme: { shell: { background: '#f99', color: '#ffffff' }, tweets: { background: '#f9f9f9', color: '#444444', links: '#1985b5' } }, features: { scrollbar: true, loop: false, live: true, hashtags: true, timestamp: true, avatars: true, toptweets: true, behavior: 'all' } }).render().start();
+new TWTR.Widget({ version: 2, type: 'search', search: '東方自作アレンジ', interval: 30000, title: '', subject: '東方自作アレンジなう', width: 250, height: 800, theme: { shell: { background: '#f99', color: '#ffffff' }, tweets: { background: '#f9f9f9', color: '#444444', links: '#1985b5' } }, features: { scrollbar: true, loop: false, live: true, hashtags: true, timestamp: true, avatars: true, toptweets: true, behavior: 'all' } }).render().start();
 </script>
 </aside>
 

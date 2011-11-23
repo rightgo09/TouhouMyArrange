@@ -2,7 +2,7 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
-		<title>[% IF subtitle %][% subtitle ~ "｜" %][% END %]東方自作アレンジ</title>
+		<title>[% IF subtitle %][% subtitle ~ "｜" %][% END %]東方自作アレンジなう</title>
 		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
 		<meta name="format-detection" content="telephone=no">
 		<link rel="stylesheet" href="[% static_file('/static/css/reset.css') %]">
@@ -18,7 +18,7 @@
 	</head>
 	<body>
 		<header>
-			<h1><a href="/">東方自作アレンジ</a></h1>
+			<h1><a href="/">東方自作アレンジなう</a></h1>
 		</header>
 
 		<div id="content">
