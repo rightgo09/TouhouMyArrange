@@ -1,8 +1,13 @@
 [% WRAPPER 'include/layout.tt' %]
-<div id="main">
+<div id="main"><div id="inner_main">
 <div id="ext_nicovideo">
 	<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/[% video.video_id %]"></script>
 </div>
+<ul id="ext_conv">
+	<li><a href="[% video.watch_url %]" target="_balnk">ニコニコ動画で見る</a></li>
+	<li><a href="http://nicosound.anyap.info/sound/[% video.video_id %]" target="_balnk">にこ☆サウンドで見る</a></li>
+	<li><a href="http://www.nicomimi.net/play/[% video.video_id %]" target="_blank">nicomimiで見る</a></li>
+</ul>
 <table id="video_info">
 	<tr>
 		<th>動画タイトル</th>
@@ -29,11 +34,11 @@
 		<td>[% video.mylist_counter %]</td>
 	</tr>
 	<tr>
-		<th>実際のページ</th>
-		<td><a href="[% video.watch_url %]">[% video.watch_url %]</a></td>
+		<th>説明文</th>
+		<td>[% video.description %]</td>
 	</tr>
 </table>
-</div>
+</div></div>
 
 <!-- 横サイドバー -->
 <aside id="sidebar">

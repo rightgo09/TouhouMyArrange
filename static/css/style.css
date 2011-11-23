@@ -33,6 +33,9 @@ div#main {
 	width: 100%;
 	margin-right: -260px;
 }
+div#inner_main {
+	margin-right: 260px;
+}
 ul#video_list {
 	margin-right: 260px;
 	padding-right: 5px;
@@ -106,8 +109,8 @@ aside#sidebar {
 */
 
 table#video_info {
-	margin-top: 20px;
 	margin-bottom: 20px;
+	line-height: 150%;
 }
 table#video_info th, table#video_info td {
 	border :1px solid #ccc;
@@ -116,5 +119,22 @@ table#video_info th, table#video_info td {
 table#video_info th {
 	text-align: right;
 	font-weight: normal;
+	white-space: nowrap;
+}
+ul#ext_conv {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+ul#ext_conv>li{
+	float: left;
+	margin-right: 30px;
+	font-size: 0.8em;
+}
+ul#ext_conv:after {
+	content: "";
+	clear: both;
+	height: 0;
+	display: block;
+	visibility: hidden;
 }
 

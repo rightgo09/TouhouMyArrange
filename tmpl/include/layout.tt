@@ -26,7 +26,11 @@
 		</div>
 
 		<footer>
-			<p id="powerd_by"><small>Powered by <a href="http://www.nicovideo.jp/">ニコニコ動画</a></small></p>
+			<p id="powerd_by"><small>Powered by</small>
+				<small><a href="http://www.nicovideo.jp/">ニコニコ動画</a>,</small>
+				<small><a href="http://nicosound.anyap.info/">にこ☆さうんど</a>,</small>
+				<small><a href="http://www.nicomimi.net/">nicomimi -にこみみ-</a></small>
+			</p>
 			<p id="created_by"><small>Created by <a href="#">rightgo09</a></small></p>
 		</footer>
 	</body>
