@@ -28,9 +28,13 @@ footer {
 	font-size: 1.5em;
 	font-weight: bold;
 }
-#video_list {
-	width: 80%;
-	/*float: left;*/
+div#main {
+	float: left;
+	width: 100%;
+	margin-right: -260px;
+}
+ul#video_list {
+	margin-right: 260px;
 	padding-right: 5px;
 }
 .video {
@@ -85,6 +89,10 @@ footer {
 }
 .video_info .pubdate {
 	margin-right: 10px;
+}
+aside#sidebar {
+	float: right;
+	width: 250px;
 }
 /*
 #tagcloud {

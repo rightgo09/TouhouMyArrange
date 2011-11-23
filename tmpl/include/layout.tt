@@ -5,8 +5,8 @@
 		<title>[% IF subtitle %][% subtitle ~ "｜" %][% END %]東方自作アレンジ</title>
 		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
 		<meta name="format-detection" content="telephone=no">
-		<link rel="stylesheet" href="/static/css/reset.css">
-		<link rel="stylesheet" href="/static/css/style.css">
+		<link rel="stylesheet" href="[% static_file('/static/css/reset.css') %]">
+		<link rel="stylesheet" href="[% static_file('/static/css/style.css') %]">
 		<style>
 		</style>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
