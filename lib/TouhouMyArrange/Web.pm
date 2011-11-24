@@ -41,6 +41,8 @@ use URI::Find;
             clickable => html_builder {
                 my $word = shift;
                 URI::Find->new(\&_autourl)->find(\$word, \&html_escape);
+                $word = _autourl_mylist($word);
+                $word = _autourl_video_id($word);
                 return $word;
             },
         },
@@ -53,6 +55,16 @@ sub _autourl {
     my ($url, $org) = @_;
     my $org_esc = html_escape($org);
     return qq'<a href="$org_esc" target="_blank">$org_esc</a>';
+}
+sub _autourl_mylist {
+    my $word = shift;
+    $word =~ s{(mylist/\d+)}{<a href="http://www.nicovideo.jp/$1" target="_blank">$1</a>}gs;
+    return $word;
+}
+sub _autourl_video_id {
+    my $word = shift;
+    $word =~ s{((sm|nm)\d+)}{<a href="http://www.nicovideo.jp/watch/$1" target="_blank">$1</a>}gs;
+    return $word;
 }
 
 
