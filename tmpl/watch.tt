@@ -35,7 +35,7 @@
 	</tr>
 	<tr>
 		<th>説明文</th>
-		<td>[% video.description %]</td>
+		<td>[% clickable(video.description) %]</td>
 	</tr>
 </table>
 </div></div>
