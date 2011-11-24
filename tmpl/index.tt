@@ -21,7 +21,7 @@
 				<span class="comment_num">コメント数:[% v.comment_num %]</span>
 				<span class="mylist_counter">マイリスト数:[% v.mylist_counter %]</span>
 			</div>
-			<div class="description">[% v.description %]</div>
+			<div class="description">[% clickable(v.description) %]</div>
 		</div></li>
 	[%- END %]
 </ul>

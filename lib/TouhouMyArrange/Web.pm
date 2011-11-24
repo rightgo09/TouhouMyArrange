@@ -12,7 +12,8 @@ sub dispatch {
 }
 
 # setup view class
-use Text::Xslate;
+use Text::Xslate qw/ html_builder html_escape /;
+use URI::Find;
 {
     my $view_conf = __PACKAGE__->config->{'Text::Xslate'} || +{};
     unless (exists $view_conf->{path}) {
@@ -37,10 +38,21 @@ use Text::Xslate;
                     return $c->uri_for($fname, { 't' => $static_file_cache{$fname} || 0 });
                 }
             },
+            clickable => html_builder {
+                my $word = shift;
+                URI::Find->new(\&_autourl)->find(\$word, \&html_escape);
+                return $word;
+            },
         },
         %$view_conf
     });
     sub create_view { $view }
+}
+
+sub _autourl {
+    my ($url, $org) = @_;
+    my $org_esc = html_escape($org);
+    return qq'<a href="$org_esc" target="_blank">$org_esc</a>';
 }
 
 
