@@ -5,6 +5,8 @@ use utf8;
 use parent qw/TouhouMyArrange Amon2::Web/;
 use File::Spec;
 
+__PACKAGE__->load_plugins('+TouhouMyArrange::Plugin::Smartphone');
+
 # dispatcher
 use TouhouMyArrange::Web::Dispatcher;
 sub dispatch {

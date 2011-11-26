@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use utf8;
 use Amon2::Web::Dispatcher::Lite;
+use File::Spec;
 
 any '/' => sub {
 	my ($c) = @_;
@@ -15,7 +16,14 @@ any '/' => sub {
 		push @video_list, { video => $video, tag => \@tag };
 	}
 
-	$c->render('index.tt' => { video_list => \@video_list });
+	# PC
+	if (!$c->is_smartphone) {
+		$c->render('index.tt' => { video_list => \@video_list });
+	}
+	# Smartphone
+	else {
+		$c->render(File::Spec->catfile('sp','index.tt') => { video_list => \@video_list });
+	}
 };
 
 any '/watch/:video_id' => sub {

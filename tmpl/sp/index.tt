@@ -1,0 +1,31 @@
+[% WRAPPER 'sp/include/layout.tt' %]
+<div id="main">
+<p id="updated_at">毎時05分頃更新中</p>
+<ul id="video_list">
+	[% FOREACH video in video_list -%]
+	[% v = video.video; tag = video.tag %]
+		<li><div class="video">
+			<div class="video_title"><a href="http://www.nicovideo.jp/watch/[% v.video_id %]" title="[% v.title %]">[% v.title %]</a>[% new || '' %]</div>
+			<ul class="tag">
+				[% FOREACH t in tag -%]
+<li>[% t.tag %]</li>
+				[%- END %]
+			</ul>
+			<a href="http://www.nicovideo.jp/watch/[% v.video_id %]" title="[% v.title %]"><img class="thumbnail" src="[% v.thumbnail_url %]" width="130" height="100" alt="[% v.title %]" /></a>
+			<div class="video_info">
+				<span class="pubdate">投稿日時:[% v.pubdate %]</span>
+				<br />
+				<span class="length">再生時間:[% v.length %]</span>
+				<br />
+				<span class="view_counter">再生数:[% v.view_counter %]</span>
+				<br />
+				<span class="comment_num">コメント数:[% v.comment_num %]</span>
+				<br />
+				<span class="mylist_counter">マイリスト数:[% v.mylist_counter %]</span>
+			</div>
+			<div class="description">[% clickable(v.description) %]</div>
+		</div></li>
+	[%- END %]
+</ul>
+</div>
+[% END %]
