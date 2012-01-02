@@ -1,8 +1,14 @@
 [% WRAPPER 'include/layout.tt' %]
+
 <div id="main"><div id="inner_main">
 <div id="ext_nicovideo">
 	<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/[% video.video_id %]"></script>
 </div>
+
+<div>
+	<a href="http://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-url="http://arrange.xii.jp/watch/[% video.video_id %]" data-text="[% video.title %] | 東方自作アレンジなう http://nico.ms/[% video.video_id %] #[% video.video_id %]">ツイートする</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
 <ul id="ext_conv">
 	<li><a href="[% video.watch_url %]" target="_balnk">ニコニコ動画で見る</a></li>
 	<li><a href="http://nicosound.anyap.info/sound/[% video.video_id %]" target="_balnk">にこ☆サウンドで見る</a></li>
