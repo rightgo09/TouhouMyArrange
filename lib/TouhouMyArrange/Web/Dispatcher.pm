@@ -8,7 +8,7 @@ use File::Spec;
 any '/' => sub {
 	my ($c) = @_;
 
-	my @list = $c->db->search('list'=>{},{limit=>8,offset=>0,order_by=>{pubdate=>'DESC'}});
+	my @list = $c->db->search('list'=>{},{limit=>16,offset=>0,order_by=>{pubdate=>'DESC'}});
 
 	my @video_list;
 	for my $video (@list) {
