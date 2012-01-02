@@ -60,12 +60,12 @@ sub _autourl {
 }
 sub _autourl_mylist {
     my $word = shift;
-    $word =~ s{(mylist/\d+)}{<a href="http://www.nicovideo.jp/$1" target="_blank">$1</a>}gs;
+    $word =~ s{([^/]|^)(mylist/\d+)}{$1<a href="http://www.nicovideo.jp/$2" target="_blank">$2</a>}gs;
     return $word;
 }
 sub _autourl_video_id {
     my $word = shift;
-    $word =~ s{((sm|nm)\d+)}{<a href="http://www.nicovideo.jp/watch/$1" target="_blank">$1</a>}gs;
+    $word =~ s{([^/]|^)((sm|nm)\d+)}{$1<a href="http://www.nicovideo.jp/watch/$2" target="_blank">$2</a>}gs;
     return $word;
 }
 
